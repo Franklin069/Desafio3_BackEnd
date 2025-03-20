@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Inscrição</title>
+    <link rel="stylesheet" href="Teste1.css">
+    <script src="Teste1.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+</head>
+
+<body>
+    <div class="container">
+        <div class="formulario">
+            <a href="#">← Voltar</a>
+            <h2>Formulário de inscrição</h2>
+            <p>Preencha os dados abaixo para fazer sua inscrição no Programa Trilhas.</p>
+            <h4>Informações do participante</h4 >
+            <form>
+                <label>Nome completo</label>
+                <input type="text" placeholder="Seu nome" class="input-erro">
+                
+                <label>Data de nascimento</label>
+                <input type="date" value="XXXX-XX-XX" class="input-ok">
+                
+                <label>CPF</label>
+                <input type="text" placeholder="XXX.XXX.XXX-XX">
+                
+                <label>Sexo</label>
+                <select>
+                    <option>Feminino</option>
+                    <option>Masculino</option>
+                    <option>Outro</option>
+                </select>
+                
+                <label>E-mail</label>
+                <div class="junto">
+                    <input type="email" placeholder="exemplo@gmail.com" class="input-erro">
+                    <span class="erro"> </span>
+                </div>
+
+                <label>Telefone</label>
+                <input type="text" placeholder="(XX) X XXXX-XXXX">
+                
+                <label>Documento de identidade</label>
+                <div class="upload-box">
+                    <img src="cloud-upload.png">
+                    <p>   Clique aqui para <br>
+                        selecionar o arquivo  </p>
+                </div>
+
+                <!-- ---------------------------Endereço residencial------------------------------------ -->
+                <h4>Endereço residencial</h4>
+                <div class="rol">
+                    <label>CEP</label>
+                    <input type="text" placeholder="XXXXX-XXX">
+
+                    <div class="local1">
+                        <div class="local">
+                        <label>Rua</label>
+                        <input type="text" placeholder="">
+                        </div>
+                        
+                        <div class="local">
+                            <div class="local3">
+                                <label>Número</label>
+                                <input type="text" placeholder="">
+                            </div>
+                        </div>
+                    </div>
+                        
+                    <div class="local2">
+                        <div class="local">
+                        <label>Cidade</label>
+                        <input type="text" placeholder="" >
+                        </div>
+
+                        <div class="local">
+                        <label>Estado</label>
+                        <input type="text" placeholder="" >
+                        </div>
+                    </div>
+                </div>
+                
+                <label>Comprovante de residência</label>
+                <div class="upload-box">
+                <img src="cloud-upload.png" alt=""> <p>Clique aqui para <br>
+                selecionar o arquivo</p>
+                </div>
+                
+                <!-- -------------------------------Trilhas de aprendizado------------------------------------------------- -->
+
+                <h4 class="ultimo">Trilhas de aprendizado</h4>
+                <p>Selecione apenas um trilha</p>
+                <div class="trilhas">
+
+                    
+                        <label class="option">
+                            <input type="radio" name="curso" checked>
+                            <span class="radio-circle"></span>
+                            <img src="front-end.png" alt="Ícone Front-end">
+                            <span>Programação Front-end</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="curso">
+                            <span class="radio-circle"></span>
+                            <img src="back-end.png" alt="Ícone Back-end">
+                            <span>Programação Back-end</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="curso">
+                            <span class="radio-circle"></span>
+                            <img src="jogos.png" alt="Ícone Jogos">
+                            <span>Programação de Jogos</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="curso">
+                            <span class="radio-circle"></span>
+                            <img src="ux.png" alt="Ícone UX">
+                            <span>Design e Experiência</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="curso">
+                            <span class="radio-circle"></span>
+                            <img src="Frame 48095973.png" alt="Ícone Ciência de Dados">
+                            <span>Ciência de Dados</span>
+                        </label>
+                    
+
+                </div>
+
+                <div class="termos">
+                    <input type="checkbox" id="termos" required>
+                    <label for="termos">Declaro que li e concordo com os <a href="#">Termos e Condições</a> e com a <a href="#">Política de Privacidade</a></label>
+                </div>
+                
+                <div class="botoes">
+                    <button type="button" class="btn cancelar">Cancelar</button>
+                    <button type="submit" class="btn inscrever">Fazer inscrição</button>
+                </div>
+            </form>
+        </div>
+        <div class="imagem-lateral">
+            <img src="Ilustration.png" alt="Ilustração do programa Trilhas">
+            <img src="logo-trilhas-inova.png" alt="logo-trilhas-inova">
+        </div>
+    </div>
+</body>
+</html>
