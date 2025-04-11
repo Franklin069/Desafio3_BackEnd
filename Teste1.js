@@ -1,5 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.querySelector("form");
+
+   
+
     
     // Limpar os campos do formulário ao carregar a página
     window.addEventListener("load", () => {
@@ -111,5 +114,32 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!isValid) {
             event.preventDefault();
         }
+        else {
+            //  Redireciona para a página de login se tudo estiver certo
+            window.location.href = "Login1.html";
+        }
     });
+
+        // Botão de salvar temporariamente
+    const salvarBtn = document.querySelector("#salvarDados");
+
+    salvarBtn.addEventListener("click", function () {
+        const dados = {};
+
+        inputs.forEach(input => {
+            const nomeCampo = input.getAttribute("placeholder") || input.name || "campo";
+            dados[nomeCampo] = input.value;
+        });
+
+        if (termos) {
+            dados["termos"] = termos.checked;
+        }
+
+        localStorage.setItem("dadosFormulario", JSON.stringify(dados));
+        alert("Dados salvos temporariamente com sucesso!");
+
+        
+    });
+    
+
 });

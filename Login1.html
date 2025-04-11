@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="login1.css">
+    
+</head>
+<body>
+
+    <div class="login-container">
+        <h2>Login</h2>
+        <input type="text" id="id_usuario" placeholder="ID do Usuário" required />
+        <input type="password" id="senha" placeholder="Senha" required />
+        <button id="btnLogin">Entrar</button>
+        <div class="mensagem" id="mensagemLogin"></div>
+    </div>
+
+    <script>
+        const btnLogin = document.getElementById("btnLogin");
+        const mensagemLogin = document.getElementById("mensagemLogin");
+
+        btnLogin.addEventListener("click", function () {
+            const id_usuario = document.getElementById("id_usuario").value.trim();
+            const senha = document.getElementById("senha").value.trim();
+            const dadosSalvos = JSON.parse(localStorage.getItem("dadosTemporarios"));
+
+            if (!id_usuario || !senha) {
+                mensagemLogin.textContent = "Preencha todos os campos.";
+                mensagemLogin.className = "mensagem erro";
+                return;
+            }
+
+            if (dadosSalvos && dadosSalvos.id_usuario === id_usuario && dadosSalvos.senha === senha) {
+                mensagemLogin.textContent = "Login realizado com sucesso!";
+                mensagemLogin.className = "mensagem sucesso";
+                // redirecionar para outra página se quiser
+                // window.location.href = "painel.html";
+            } else {
+                mensagemLogin.textContent = "ID ou senha inválidos.";
+                mensagemLogin.className = "mensagem erro";
+            }
+        });
+    </script>
+
+</body>
+</html>
